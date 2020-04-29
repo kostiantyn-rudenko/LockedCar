@@ -10,12 +10,7 @@ public class CameraManager : MonoBehaviour
     void LateUpdate() 
     {   
         for (int i = 0; i < _cameras.Length; i++) {
-            if (Input.GetKey(KeyCode.P)) {
-                Debug.Log("checking " + i.ToString());
-
-            }
             if (Input.GetKeyUp((i + 1).ToString())) {
-                Debug.Log("Switch camera to " + i.ToString());
                 SwitchCamera(i);
                 return;
             }
